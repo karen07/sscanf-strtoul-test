@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.6)
+project(sscanf_strtoul_test)
+add_compile_options(-Wall -Wextra -Werror)
+add_link_options()
+add_executable(sscanf_strtoul_test src/sscanf_strtoul_test.c)
+install(TARGETS sscanf_strtoul_test DESTINATION /usr/bin)
