@@ -19,8 +19,6 @@ int main()
         }
 
         sprintf(&(hex_test_vals[i * (sizeof(uint64_t) * 2 + 1)]), "%.16lx", test_vals[i]);
-
-        //printf("%s\n", &(hex_test_vals[i * sizeof(uint64_t) * 2]));
     }
 
     //sscanf
@@ -37,7 +35,7 @@ int main()
     uint64_t now_us_start = now_timeval_start.tv_sec * 1000000 + now_timeval_start.tv_usec;
     uint64_t now_us_end = now_timeval_end.tv_sec * 1000000 + now_timeval_end.tv_usec;
 
-    printf("spend time 1  sscanf: %ld\n", now_us_end - now_us_start);
+    printf("spend time 1  sscanf: %ld μs\n", now_us_end - now_us_start);
 
     for (int i = 0; i < test_vals_size; i++) {
         if (res_vals[i] != test_vals[i]) {
@@ -58,7 +56,7 @@ int main()
     now_us_start = now_timeval_start.tv_sec * 1000000 + now_timeval_start.tv_usec;
     now_us_end = now_timeval_end.tv_sec * 1000000 + now_timeval_end.tv_usec;
 
-    printf("spend time 1 strtoul: %ld\n", now_us_end - now_us_start);
+    printf("spend time 1 strtoul: %ld μs\n", now_us_end - now_us_start);
 
     for (int i = 0; i < test_vals_size; i++) {
         if (res_vals[i] != test_vals[i]) {
@@ -79,7 +77,7 @@ int main()
     now_us_start = now_timeval_start.tv_sec * 1000000 + now_timeval_start.tv_usec;
     now_us_end = now_timeval_end.tv_sec * 1000000 + now_timeval_end.tv_usec;
 
-    printf("spend time 2  sscanf: %ld\n", now_us_end - now_us_start);
+    printf("spend time 2  sscanf: %ld μs\n", now_us_end - now_us_start);
 
     for (int i = 0; i < test_vals_size; i++) {
         if (res_vals[i] != test_vals[i]) {
@@ -100,7 +98,7 @@ int main()
     now_us_start = now_timeval_start.tv_sec * 1000000 + now_timeval_start.tv_usec;
     now_us_end = now_timeval_end.tv_sec * 1000000 + now_timeval_end.tv_usec;
 
-    printf("spend time 1 strtoul: %ld\n", now_us_end - now_us_start);
+    printf("spend time 2 strtoul: %ld μs\n", now_us_end - now_us_start);
 
     for (int i = 0; i < test_vals_size; i++) {
         if (res_vals[i] != test_vals[i]) {
