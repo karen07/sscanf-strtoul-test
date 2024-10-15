@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <sys/time.h>
 
-int main()
+int main(void)
 {
     int test_vals_size = 10000000;
 
