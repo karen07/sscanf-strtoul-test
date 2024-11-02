@@ -1,1 +1,1 @@
-# sscanf_strtoul_test
+# sscanf-strtoul-test
